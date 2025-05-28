@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import path from "path";
+import path from "path-browserify";
 import { toast } from "react-toastify";
 import { UploadIcon } from "./Icons";
 import UploadVideoModal from "./UploadVideoModal";

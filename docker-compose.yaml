@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  db:
+    image: "sumankarki777/youtubepostgres:v.0.1"
+    container_name: "my-postgres"
+    ports:
+      - "5432:5432"
+    networks:
+      - ynetwork_1
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: youtube
+  backend:
+    image: "sumankarki777/youtubebackend:v.0.1"
+    container_name: "YoutubeBackend_1"
+    ports:
+      - "5000:5000"
+    networks:
+      - ynetwork_1
+  frontend:
+    image: "sumankarki777/youtubefrontend:v.0.1"
+    container_name: "Youtubefrontend_1"
+    ports:
+      - "3000:3000"
+    networks:
+      - ynetwork_1
+
+networks:
+  ynetwork_1:
+    name: "ynetwork"
+    driver: bridge
+
