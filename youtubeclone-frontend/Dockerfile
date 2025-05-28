@@ -2,11 +2,11 @@ FROM node:slim
 
 WORKDIR /app
 
-COPY . .
+COPY yotubeclone-frontend .
 
 RUN npm install
 
-COPY .env .env
+COPY yotubeclone-frontend/.env .env
 
 EXPOSE 3000
 

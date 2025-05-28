@@ -2,11 +2,11 @@ FROM node:slim
 
 WORKDIR /app
 
-COPY . .
+COPY youtubeclone-backend .
 
 RUN npm install
 
-COPY .env .env
+COPY youtubeclone-backend/.env .env
 
 EXPOSE 5000 
 
